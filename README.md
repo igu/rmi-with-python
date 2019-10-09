@@ -17,3 +17,9 @@ pip install requests`
 ```
 python3 servidor.py
 ```
+
+##### Copie a saída e execute o cliente e siga os passos
+
+```
+python3 cliente.py
+```

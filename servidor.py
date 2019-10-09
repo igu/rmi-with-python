@@ -5,7 +5,7 @@ import requests
 @Pyro4.expose
 class GithubUser:
     def getUserInfo(self, username):
-        api_url_base = 'https://https://api.github.com/users/{}'.format(username)
+        api_url_base = 'https://api.github.com/users/{}'.format(username)
         headers = {'Content-Type': 'application/json'}
         response = requests.get(api_url_base, headers = headers)
         if response.status_code == 200:

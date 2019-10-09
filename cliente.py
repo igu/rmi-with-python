@@ -1,15 +1,16 @@
 import Pyro4
+import json
 
-uri = input('Digite a URI')
+uri = input('Digite a URI: ')
 if uri:
     objectremote = Pyro4.Proxy(uri)
-    username = input('Digite o seu username')
+    username = input('Digite o seu username: ')
     if username:
-        userInfo = objectremote.GithubUser(username)
+        userInfo = objectremote.getUserInfo(username)
         if userInfo == None:
             print('Usuario nao encontrado')
         else:
-            print(userInfo)
+            print(json.dumps(userInfo, indent=4, sort_keys=True))
     else:
         print('Nao eh permitido usuario vazio')
 else:

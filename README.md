@@ -9,7 +9,7 @@ pip install pyro4
 ```
 
 ```
-pip install requests`
+pip install requests
 ```
 
 ##### Agora, execute o servidor
